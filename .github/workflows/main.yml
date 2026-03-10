@@ -6,8 +6,15 @@ on:
       - '**'
 
 jobs:
-  affichage-fichiers:
+  build-and-lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Afficher les fichiers (commande ls)
+      - name: Liste des fichiers
+        run: ls -R
+
+      - name: Mise en place du code (Checkout)
+        uses: actions/checkout@v4
+
+      - name: Liste des fichiers après checkout
         run: ls -R
