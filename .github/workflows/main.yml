@@ -1,0 +1,23 @@
+name: CI Mes Dates
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Liste des fichiers avant checkout
+        run: ls -R
+
+      - name: PHP Code Sniffer (Lint)
+        run: |
+          composer global require "squizlabs/php_codesniffer=*"
+          export PATH="$PATH:$HOME/.composer/vendor/bin"
+          phpcs --standard=PSR12 . 
