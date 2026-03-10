@@ -18,3 +18,9 @@ jobs:
 
       - name: Liste des fichiers après checkout
         run: ls -R
+      
+      - name: Installation de PHPCS
+        run: composer global require "squizlabs/php_codesniffer=*"
+
+      - name: PHP Code Sniffer (Lint)
+        run: ~/.composer/vendor/bin/phpcs --standard=PSR12 src/
