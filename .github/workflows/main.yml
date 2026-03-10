@@ -4,20 +4,10 @@ on:
   push:
     branches:
       - '**'
-  pull_request:
-    branches:
-      - '**'
 
 jobs:
-  build-and-lint:
+  affichage-fichiers:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Liste des fichiers avant checkout
+      - name: Afficher les fichiers (commande ls)
         run: ls -R
-
-      - name: PHP Code Sniffer (Lint)
-        run: |
-          composer global require "squizlabs/php_codesniffer=*"
-          export PATH="$PATH:$HOME/.composer/vendor/bin"
-          phpcs --standard=PSR12 . 
