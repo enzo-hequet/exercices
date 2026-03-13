@@ -1,0 +1,16 @@
+name: Validation Arborescence et Extensions
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  check-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Recuperation du code
+        uses: actions/checkout@v4
+
+      - name: 3. Execution du script de validation
+        run: php .github/scripts/checkTree.php
