@@ -1,5 +1,5 @@
 <?php
-$required = ['site', 'site/img', 'site/css', 'site/js', 'src'];
+$required = ['public', 'public/img', 'public/css', 'public/js', 'src'];
 $errors = [];
 
 foreach ($required as $dir) {
