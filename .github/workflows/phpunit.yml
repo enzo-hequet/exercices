@@ -30,8 +30,5 @@ jobs:
         run: find src/ -name "*.php" -exec php -l {} \;
 
       # 2. Exécution des TESTS et REPORTING (Objectif 100%)
-      - name: Run PHPUnit Tests with Coverage
-        run: |
-          ./vendor/bin/phpunit tests \
-          --coverage-text \
-          --whitelist src/
+      - name: Run PHPUnit Tests
+        run: ./vendor/bin/phpunit --coverage-text
