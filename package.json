@@ -1,0 +1,27 @@
+{
+  "name": "exercice",
+  "version": "1.0.0",
+  "description": "![Capture d’écran du 2026-02-13 15-42-50](https://github.com/user-attachments/assets/db8639ac-4b14-4304-9be0-71e90baad7d7)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzo-hequet/exercices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/enzo-hequet/exercices/issues"
+  },
+  "homepage": "https://github.com/enzo-hequet/exercices#readme",
+  "devDependencies": {
+    "testcafe": "^3.7.4"
+  }
+}

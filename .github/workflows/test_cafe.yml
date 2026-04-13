@@ -1,0 +1,13 @@
+- name: Start PHP Server for E2E tests
+        run: php -S localhost:8000 -t TD8 & 
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install TestCafe
+        run: npm install
+
+      - name: Run TestCafe E2E tests
+        run: npx testcafe "chrome:headless" TD8/test_cafe.js
