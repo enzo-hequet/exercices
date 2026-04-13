@@ -6,6 +6,7 @@
     <title>TD8</title>
 </head>
 <body>
+    <h1>Bienvenue au TD8</h1>
     <h2>Enregistrez votre nom</h2>
     <form action="affichage.php" method="POST">
         <label for="nom">Nom :</label>
